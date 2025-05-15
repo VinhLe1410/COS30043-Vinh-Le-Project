@@ -4,9 +4,15 @@ import FooterBar from './components/common/FooterBar.vue'
 </script>
 
 <template>
-  <div id="app">
-    <NavBar />
+  <NavBar />
+  <main class="container py-4">
     <router-view />
-    <FooterBar />
-  </div>
+  </main>
+  <FooterBar />
 </template>
+
+<style>
+.container {
+  min-height: calc(100vh - 180px); /* 100vh minus (navbar 80px + footer 100px) */
+}
+</style>
